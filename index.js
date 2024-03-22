@@ -43,7 +43,7 @@ function convertTimeToWords(time) {
       return `half past ${timeMap[timeArray[0]]}`;
 
     case '45':
-      return `quarter to ${timeMap[parseInt(timeArray[0]) + 1]}`;
+      return `quarter to ${timeMap[Number(timeArray[0]) + 1]}`;
 
     case '00':
       return `${timeMap[timeArray[0]]} ${timeMap[timeArray[1]]}`;
@@ -52,7 +52,7 @@ function convertTimeToWords(time) {
       return `${timeMap[timeArray[1]]} past ${timeMap[timeArray[0]]}`;
   }
 
-  return `${timeMap[60 - Number(timeArray[1])]} to ${timeMap[parseInt(timeArray[0]) + 1]}`;
+  return `${timeMap[60 - Number(timeArray[1])]} to ${timeMap[Number(timeArray[0]) + 1]}`;
 
 }
 
